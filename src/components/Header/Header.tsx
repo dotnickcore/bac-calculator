@@ -1,8 +1,6 @@
 function Header() {
   return (
-    <div>
-      Header
-    </div>
+    <h1 className="text-3xl text-center">Blood Alcohol Concentration Calculator</h1>
   )
 }
 
