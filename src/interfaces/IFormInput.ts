@@ -1,8 +1,7 @@
-export type Gender = 'Female' | 'Male';
-
 export interface IFormInput {
     bodyWeight: number,
+    weightMeasurement: 'lbs' | 'kg';
     hoursSinceFirstDrink: number,
     numberOfStandardDrinks: number,
-    gender: Gender 
+    gender: 'Female' | 'Male';
 }
