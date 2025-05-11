@@ -1,14 +1,15 @@
-import type { FieldValues } from "react-hook-form";
-import type { InputProps } from "../../types/InputProps";
+import type { FieldValues } from 'react-hook-form';
+import type { InputProps } from '../../types/InputProps';
 
-function Input<T extends FieldValues>({ 
-  name, 
-  register, 
-  type = "text", 
-  placeholder 
+function Input<T extends FieldValues>({
+  name,
+  register,
+  type = 'text',
+  placeholder,
 }: InputProps<T>) {
   return (
     <input
+      className="w-full p-2 border border-gray-300 rounded-md"
       type={type}
       placeholder={placeholder}
       {...register(name)}
@@ -16,4 +17,4 @@ function Input<T extends FieldValues>({
   );
 }
 
-export default Input
+export default Input;

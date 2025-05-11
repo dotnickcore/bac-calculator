@@ -7,7 +7,7 @@ export function Select<T extends FieldValues>({
   options 
 }: SelectProps<T>) {
   return (
-    <select {...register(name)}>
+    <select {...register(name)} className="w-full p-2 border border-gray-300 rounded-md">
       {options.map((option) => (
         <option key={option.value} value={option.value}>
           {option.label}
