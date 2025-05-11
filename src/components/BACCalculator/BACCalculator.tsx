@@ -5,10 +5,15 @@ import Input from '../Input/Input';
 import { Select } from '../Select/Select';
 import SubmitButton from '../SubmitButton/SubmitButton';
 import Label from '../Label/Label';
+import { useBACResults } from '../../hooks/useBACResults';
 
 function BACCalculator() {
   const formMethods = useForm<IFormInput>();
-  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+  const { calculateBAC } = useBACResults();
+
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    calculateBAC(data);
+  };
 
   return (
     <Form formMethods={formMethods} onSubmit={onSubmit}>
@@ -47,7 +52,9 @@ function BACCalculator() {
             />
           </div>
           <div className="flex-1">
-            <Label htmlFor="numberOfStandardDrinks">Number of standard drinks consumed</Label>
+            <Label htmlFor="numberOfStandardDrinks">
+              Number of standard drinks consumed
+            </Label>
             <Input
               name="numberOfStandardDrinks"
               register={formMethods.register}

@@ -3,5 +3,5 @@ export interface IFormInput {
     weightMeasurement: 'lbs' | 'kg';
     hoursSinceFirstDrink: number,
     numberOfStandardDrinks: number,
-    gender: 'Female' | 'Male';
+    gender: 'male' | 'female';
 }
